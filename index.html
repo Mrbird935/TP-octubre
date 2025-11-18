@@ -1,0 +1,65 @@
+eto e html 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyecto Informático - 4°3 Computación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Lista de asistencia</h2>
+  <div class="controls">
+    <select class="cursos" name="curso" onchange="manejarCambioCurso(event)">
+      <option value="">Seleccionar curso</option>
+      <option value="4°3">4°3 Computación</option>
+      <option value="4°4">4°4 Computación</option>
+    </select>
+
+    <select id="materias" name="materia" onchange="cargarLista(event)">
+      <option value="">Seleccionar materia</option>
+      <option value="Proyecto Informático">Proyecto Informático</option>
+      <option value="Base de datos">Base de datos</option>
+      <option value="Algoritmos">Algoritmos</option>
+    </select>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>apellido</th>
+        <th>nombre</th>
+        <th>acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-alumnos"></tbody>
+  </table>
+  <hr>
+  <div class="registro">
+    <input type="date" onchange="changeDate(event)">
+
+    <table>
+      <thead>
+        <tr>
+          <th>orden</th>
+          <th>apellido</th>
+          <th>nombre</th>
+          <th>registro</th>
+          <th>hora ingreso</th>
+          <th>hora egreso</th>
+          <th>acciones</th>
+        </tr>
+      </thead>
+  <tbody id="tabla-registro">
+  <tr>
+    <td><input type="time"></td>
+    <td><input type="time"></td>
+    <td class="acciones">
+      <button class="btn e-btn" onclick="editarRegistro(1)">E</button>
+      <button class="btn x-btn" onclick="eliminarRegistro(1)">X</button>
+    </td>
+  </tr>
+</tbody>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
