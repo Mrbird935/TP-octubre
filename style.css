@@ -3,6 +3,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     background: white;
+    background-color: whitesmoke;
     
     }
     
@@ -12,20 +13,29 @@ body {
     color: white;
     padding: 10px;
     border-radius: 10px;
+    border: solid black;
     
     }
-    
+
+    .Logo{ 
+
+    margin-left: 20px;
+    border: solid black;
+    }
+
+
     table{
     
     margin: 20px auto;
     border-collapse: collapse;
     width: 80%;
-    
+    border: solid black;
+
     }
     
     th, td {
     
-    border: 1px solid grey;
+    border: 1px solid black;
     padding: 8px;
     }
     
@@ -70,5 +80,6 @@ body {
     #x-btn {
     
     background-color: crimson;
+    
     
     }
