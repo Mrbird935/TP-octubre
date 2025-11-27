@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+   <title>Sistema de Gestión de Asistencias</title>
+</head>
+<body>
+   <div class="contenedor-principal">
+      <header class="encabezado">
+         <h1 class="titulo-principal">Sistema de Control de Asistencias</h1>
+      </header>
+
+      <section class="seccion-seleccion">
+         <div class="contenedor-selects"> 
+            <div class="grupo-select">
+               <label for="cursos">Curso:</label>
+               <select id="cursos" name="curso">
+                  <option value="">Seleccionar Curso</option>
+               </select>
+            </div>
+
+            <div class="grupo-select">
+               <label for="materias">Materia:</label>
+               <select id="materias" name="materia">
+                  <option value="">Seleccionar Materia</option>
+               </select>
+            </div>
+         </div>
+      </section>
+
+      <section class="seccion-tabla">
+         <div class="tabla-asistencia-wrapper"> 
+            <table class="tabla-asistencias">
+               <thead>
+                  <tr>
+                     <th>Nombre</th>
+                     <th>Apellido</th>
+                     <th>Acciones de Asistencia</th>
+                  </tr>
+               </thead> 
+               <tbody> 
+                  <tr>
+                     <td colspan="3" class="mensaje-inicial">
+                        Selecciona el <strong>Curso</strong> y su <strong>Materia</strong> para ver los estudiantes
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </section>
+
+      <section class="seccion-formularios">
+         <div class="contenedor-formularios">
+            
+            <div class="tarjeta-formulario">
+               <h2 class="titulo-formulario">Agregar Estudiante</h2>
+               <form class="formulario" onsubmit="AgregarEstudiante(event)">
+                  <div class="grupo-input">
+                     <input 
+                        type="text" 
+                        placeholder="Nombre del estudiante" 
+                        name="nombre"
+                        class="input-texto"
+                        required
+                     />
+                  </div>
+                  
+                  <div class="grupo-input">
+                     <input 
+                        type="text" 
+                        placeholder="Apellido del estudiante" 
+                        name="apellido"
+                        class="input-texto"
+                        required
+                     />
+                  </div>
+                  
+                  <button type="submit" class="boton-submit">
+                     Registrar Estudiante
+                  </button>
+               </form>
+            </div>
+
+            <div class="tarjeta-formulario">
+               <h2 class="titulo-formulario">Crear Curso</h2>
+               <form class="formulario" onsubmit="CrearCurso(event)">
+                  <div class="grupo-input">
+                     <input 
+                        type="number" 
+                        placeholder="Año (ej: 4)" 
+                        name="anio"
+                        class="input-texto"
+                        min="1"
+                        max="7"
+                        required
+                     />
+                  </div>
+                  
+                  <div class="grupo-input">
+                     <input 
+                        type="number" 
+                        placeholder="División (ej: 3)" 
+                        name="division"
+                        class="input-texto"
+                        min="1"
+                        max="10"
+                        required
+                     />
+                  </div>
+                  
+                  <div class="grupo-input">
+                     <input 
+                        type="text" 
+                        placeholder="Especialidad" 
+                        name="especialidad"
+                        class="input-texto"
+                        required
+                     />
+                  </div>
+                  
+                  <button type="submit" class="boton-submit">
+                     Crear Curso
+                  </button>
+               </form>
+            </div>
+
+            <div class="tarjeta-formulario">
+               <h2 class="titulo-formulario">Agregar Materia</h2>
+               <form id="crear-materia" class="formulario" onsubmit="CrearMateria(event)">
+                  <div class="grupo-input">
+                     <input 
+                        type="text" 
+                        placeholder="Nombre de la materia" 
+                        name="nombre"
+                        class="input-texto"
+                        required
+                     />
+                  </div>
+                  
+                  <button type="submit" class="boton-submit">
+                     Agregar Materia
+                  </button>
+               </form>
+            </div>
+
+         </div>
+      </section>
+   </div>
+
+   <script src="main.js"></script> 
+</body>
+</html>
